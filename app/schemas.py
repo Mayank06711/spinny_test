@@ -3,15 +3,13 @@ from typing import Optional
 
 class UserCreate(BaseModel):
     name: str
-    is_active: bool = False
-
 class UserUpdate(BaseModel):
     name: Optional[str] = None
-    is_active: Optional[bool] = None
 
 class User(BaseModel):
     id: str
     name: str
+    is_active: bool = False
 
 class Seat(BaseModel):
     id: str
